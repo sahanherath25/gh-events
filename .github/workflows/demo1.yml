@@ -9,8 +9,6 @@ on:
       - main
       - 'dev-*'
       - 'feat/**'
-  path-ignore:
-      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
