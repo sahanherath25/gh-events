@@ -3,13 +3,6 @@ on:
   pull_request:
     types:
       - opened
-    branches-ignore:
-      - 'mona/octocat'
-      - 'releases/**-alpha'
-    branches:
-      - main
-      - 'dev-*'
-      - 'feat/**'
   workflow_dispatch:
   push:
     branches:
