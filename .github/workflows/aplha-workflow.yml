@@ -9,7 +9,11 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - 'dev-sahan'
+      - master
+      - 'dev-*' #dev-sahan,dev-isuru,dev-angela
+      - 'feat/**' # feat/sahan ,feat/new, feat/
+    paths-ignore:
+      - '.github/workflows/*'
 
 jobs:
   deploy:
