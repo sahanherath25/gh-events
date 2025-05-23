@@ -1,32 +1,32 @@
-name: Events Demo
-on:
-  pull_request:
-    types:
-      - opened
-      - edited
-      - closed
-  workflow_dispatch:
-  push:
-    branches:
-      - master
-      - 'dev-*' #dev-sahan,dev-isuru,dev-angela
-      - 'feat/**' # feat/sahan ,feat/new, feat/
-    paths-ignore:
-      - '.github/workflows/*'
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Output Event Data
-        run: echo "${{ toJSON(github.event) }}"
-      - name: Get the Code
-        uses: actions/checkout@v4
-      - name: Install Dependencies
-        run: npm ic
-      - name: Test Code
-        run: npm run test
-      - name: Build Code
-        run: npm run build
-      - name: Deploy Project
-        run: echo "Deploying to the Server..."
+#name: Events Demo
+#on:
+#  pull_request:
+#    types:
+#      - opened
+#      - edited
+#      - closed
+#  workflow_dispatch:
+#  push:
+#    branches:
+#      - master
+#      - 'dev-*' #dev-sahan,dev-isuru,dev-angela
+#      - 'feat/**' # feat/sahan ,feat/new, feat/
+#    paths-ignore:
+#      - '.github/workflows/*'
+#
+#jobs:
+#  deploy:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Output Event Data
+#        run: echo "${{ toJSON(github.event) }}"
+#      - name: Get the Code
+#        uses: actions/checkout@v4
+#      - name: Install Dependencies
+#        run: npm ic
+#      - name: Test Code
+#        run: npm run test
+#      - name: Build Code
+#        run: npm run build
+#      - name: Deploy Project
+#        run: echo "Deploying to the Server..."
