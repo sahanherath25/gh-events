@@ -9,7 +9,7 @@ on:
       - master
       - 'dev-*'   # dev-sahan,dev-alex
       - 'feat/**'
-    paths-ignore:
+    paths:
       - '.github/workflows/*'
 jobs:
   deploy:
