@@ -9,8 +9,8 @@ on:
       - master
       - 'dev-*'   # dev-sahan,dev-alex
       - 'feat/**'
-    paths:
-      - '.github/workflows/*'
+    paths-ignore:
+      - 'index.html'
 jobs:
   deploy:
     runs-on: ubuntu-latest
