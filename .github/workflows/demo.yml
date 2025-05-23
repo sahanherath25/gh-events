@@ -10,13 +10,13 @@ on:
       - 'dev-*'   # dev-sahan,dev-alex
       - 'feat/**'
     paths-ignore:
-      - './index.html'
+      - 'index.html'
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Output event data
-        run: echo "${{ toJSON(github.event) }}"
+        run: echo "${{ toJSON(github.triggering_actor) }}"
       - name: Get code
         uses: actions/checkout@v4
       - name: Install dependencies
